@@ -1,0 +1,64 @@
+function cargarProvincias(respuesta) {
+
+
+        for(let i of respuesta.provincias){
+
+
+
+
+            // provincias
+            let miNodoPrecio = document.createElement('option');
+            miNodoPrecio.textContent =  i['nombre'] ;
+            // Insertamos
+            opcionesProvincias.appendChild(miNodoPrecio);  //opciones es id de la etiqueta select
+
+
+
+        }
+        provincia = document.document.getElementById('opcionesProvincias').value; //cargo la provincia a la variable
+        console.log("y ahora: " + provincia);
+
+    }
+
+    function cargarLocalidades(respuesta2) {
+
+      var img = "https://apis.datos.gob.ar/georef/api/localidades?provincia=";
+      var jpg = "&max=234";
+      var ruta = img.concat(img,provincia,jpg);
+      console.log("esta es la ruta:" + ruta);
+
+      fetch(ruta)
+      .then((respuesta2) => {
+          return respuesta2.json();
+      }).then((respuesta2) => {
+
+          console.log(respuesta2.localidades.length);
+
+
+          //imprimo por consola
+          for (let i = 0, c = respuesta2.localidades.length; i < c; i++) {
+            console.log("Localidades: " + respuesta2.localidades[i].nombre);
+          }
+
+
+
+
+
+      });
+        for(let i of respuesta2.localidades){
+
+
+
+
+            // provincias
+            let miNodoPrecio = document.createElement('option');
+            miNodoPrecio.textContent =  i['nombre'] ;
+            // Insertamos
+            opcionesLocalidades.appendChild(miNodoPrecio);  //opciones es id de la etiqueta select
+
+
+
+        }
+        localidad = document.document.getElementById('opcionesLocalidades').value; //cargo la provincia a la variable
+
+    }
