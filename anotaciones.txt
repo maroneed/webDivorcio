@@ -1,0 +1,70 @@
+domicilio de convivencia:
+
+-provincia
+-localidad
+-calle
+-altura
+-piso
+-codigo postal  (ingresarlo a mano)
+
+---------------------------
+
+propuesta
+
+-ingresarla a mano.
+
+---------------------------
+
+personas:
+
+-2 grupos de imputs iguales, uno para cada persona con:
+
+-nombre
+-apellido
+-dni
+
+---------------------------
+
+acta de matrimonio:
+
+-ingresar el numero de acta .
+
+---------------------------
+
+tipo de solicitud:
+
+-un checkBox con las 2 opciones posibles.
+
+---------------------------
+
+desplegable:
+
+<div class="container">
+        <select class="form-control" id="proC1">
+            <option>Profesion 1 GET MS MATR</option>
+            <option>Profesion 2</option>
+            <option>Profesion 3</option>
+        </select>
+    </div>
+
+
+
+acta:
+
+
+
+<div class="col-md-4">
+
+                <hr />
+                <div class="container">
+                    Número de Acta: <input type="text" id="actin" class="form-control" placeholder="Número de Acta">
+                    Tomo: <input type="text" id="tomin" class="form-control" placeholder="Tomo">
+                    Folio: <input type="text" id="folin" class="form-control" placeholder="Folio">
+                </div>
+                <p></p>
+                <div class="container">
+                    <input type="button" id="botTramite" class="btn btn-success" value="Confirmar Tramite" />
+                </div>
+
+            </div>
+

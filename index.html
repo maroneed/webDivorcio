@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=”utf-8” />
+    <title>Registro Civil Tramite Matrimonio</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="/js/proyecto.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1 class="text-center">Tramite Divorcio</h1>
+
+        </div>
+
+    </header>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+              <h5 class="mb-3 text-center text-primary">Datos de matrimonio</h5>
+
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">ACTA</span>
+                </div>
+                <input id="acta" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <button onclick="confirmarActa()">comprobar</button>
+
+              </div>
+          </div>
+          <div class="col-md-6">
+              <h5 class="mb-3 text-center text-primary">Tipo de solicitud</h5>
+
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">NORMAL</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">URGENTE</label>
+              </div>
+
+          </div>
+            <div id ="primeraPersona"class="col-md-6">
+                <hr />
+
+                <h5 class="mb-3 text-center text-primary">Datos primera persona</h5>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
+                  </div>
+                  <input id="dniC1" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">NOMBRE</span>
+                  </div>
+                  <input id="dniP11" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">APELLIDO</span>
+                  </div>
+                  <input id="dniP12" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+            </div>
+
+            <div id ="segundaPersona" class="col-md-6">
+                <hr />
+
+                <h5 class="mb-3 text-center text-primary">Datos segunda persona</h5>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
+                  </div>
+                  <input id="dniC1" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">NOMBRE</span>
+                  </div>
+                  <input id="dniP11" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">APELLIDO</span>
+                  </div>
+                  <input id="dniP12" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+            </div>
+
+            <div id ="domicilio" class="col-md-6">
+
+                <hr />
+                <h5 class="mb-3 text-center text-primary">Domicilio de convivencia</h5>
+
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">PROVINCIA</span>
+                  </div>
+                  <select class="form-control" id="opcionesProvincias">
+
+                  </select>
+                </div>
+
+
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">LOCALIDAD</span>
+                  </div>
+                  <select class="form-control" id="opcionesLocalidades">
+
+                  </select>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">CALLE</span>
+                  </div>
+                  <input id="dniP12" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">NUMERO</span>
+                  </div>
+                  <input id="dniP12" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">PISO</span>
+                  </div>
+                  <input id="dniP12" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">CÓDIGO POSTAL</span>
+                  </div>
+                  <input id="dniP12" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+            </div>
+
+            <div id ="propuesta" class="col-md-6">
+                <hr />
+                <h5 class="mb-3 text-center text-primary">Propuesta</h5>
+
+                <div class="form-group">
+
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="11"></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
